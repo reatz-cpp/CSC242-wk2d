@@ -1,2 +1,2 @@
-# CSC242-wk2d
-Week Two Discussion
+# CSC242
+Files for CSC242- Introduction to Programming Concepts
