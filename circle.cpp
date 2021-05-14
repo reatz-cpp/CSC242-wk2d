@@ -1,19 +1,62 @@
 #include <iostream>
 using namespace std;
 
-//This program prompts user to enter circle raduis
-//Then the circle area is displayed
+
+class Circle
+{
+public:
+	
+	Circle(); 
+	Circle(double r);  
+	double area(); 
+	double perimeter();
+	void setRadius(double r); 
+	double getRadius(); 
+	
+private:
+	double radius;
+};
+
+
+Circle::Circle()
+{
+	radius = 1;
+}
+
+Circle::Circle(double r)
+{
+	radius = r;
+}
+
+double Circle::area()
+{
+	return 3.14 * pow(radius, 2);
+}
+
+double Circle::perimeter()
+{
+	return 2 * 3.14 * radius;
+}
+
+void Circle::setRadius(double r)
+{
+	
+	if (r >= 0)
+		radius = r;
+
+}
+
+double Circle::getRadius()
+{
+	return radius;
+}
+
 
 int main()
 {
-	double radius;
-	double circumference;
-	const double PI = 3.14159;
-	double area;
-	cout << "Enter radius\n";
-	cin >> radius;
-	area = PI * (radius * radius);
-	circumference = 2 * PI * radius;
-	cout << "The area and circumference of a circle with radius " << radius << " is " << area << " and " << circumference << endl;
+	
+	Circle c1;
+	cout << "The area of the circle is: " << c1.area() ;
 	return 0;
+
 }
